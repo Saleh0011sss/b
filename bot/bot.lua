@@ -83,8 +83,10 @@ function create_config( )
     "msg-checks",
     "plugins",
     "tools",
-     "time",
-     "warn"
+    "time",
+    "warn",
+    "plugins"
+			
  },
     sudo_users = {188383245},
     admins = {},
