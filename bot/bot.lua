@@ -82,7 +82,9 @@ function create_config( )
     "groupmanager",
     "msg-checks",
     "plugins",
-    "tools"
+    "tools",
+     "time",
+     "warn"
  },
     sudo_users = {188383245},
     admins = {},
