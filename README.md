@@ -1,4 +1,4 @@
-# [BDreborn](https://telegram.me/BDreborn)
+# [Aelux](https://telegram.me/Arlux)
 
 **An advanced and powerful administration bot based on NEW TG-CLI
 
