@@ -1,4 +1,4 @@
-# [Aelux](https://telegram.me/Arlux)
+# [Arlux](https://telegram.me/Arlux)
 
 **An advanced and powerful administration bot based on NEW TG-CLI
 
