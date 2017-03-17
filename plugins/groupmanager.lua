@@ -4,9 +4,9 @@ local lang = redis:get(hash)
     -- superuser and admins only (because sudo are always has privilege)
     if not is_admin(msg) then
    if not lang then
-        return '_You are not bot admin_'
+        return '#》_❗️You are not bot admin❗️_'
 else
-     return 'شما مدیر ربات نمیباشید'
+     return '❗️شما مدیر ربات نمیباشید❗️#》'
     end
 end
     local data = load_data(_config.moderation.data)
@@ -2120,9 +2120,9 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
 if not is_mod(msg) then
 if not lang then
- return "_You're Not_ *Moderator*"
+ return "#》_You're Not_ *Moderator*"
 else
- return "شما مدیر گروه نمیباشید"
+ return "شما مدیر گروه نمیباشید#》"
 end
 end
 
@@ -2149,9 +2149,9 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
  if not is_mod(msg) then
 if not lang then
-return "_You're Not_ *Moderator*"
+return "#》_You're Not_ *Moderator*"
 else
-return "شما مدیر گروه نمیباشید"
+return "شما مدیر گروه نمیباشید#》"
 end
 end 
 
@@ -2178,9 +2178,9 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
 if not is_mod(msg) then
 if not lang then
- return "_You're Not_ *Moderator*"
+ return "#》_You're Not_ *Moderator*"
 else
- return "شما مدیر گروه نمیباشید"
+ return "شما مدیر گروه نمیباشید#》"
 end
 end
 
@@ -2381,9 +2381,9 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
  if not is_mod(msg) then
 if not lang then
-return "_You're Not_ *Moderator*"
+return "#》_You're Not_ *Moderator*"
 else
-return "شما مدیر گروه نیستید"
+return "شما مدیر گروه نیستید#》"
 end 
 end
 
@@ -2411,9 +2411,9 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
 if not is_mod(msg) then
 if not lang then
- return "_You're Not_ *Moderator*"
+ return "#》_You're Not_ *Moderator*"
 else
- return "شما مدیر گروه نمیباشید"
+ return "شما مدیر گروه نمیباشید#》"
 end
 end
 
@@ -2440,9 +2440,9 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
  if not is_mod(msg) then
 if not lang then
-return "_You're Not_ *Moderator*"
+return "#》_You're Not_ *Moderator*"
 else
-return "شما مدیر گروه نیستید"
+return "شما مدیر گروه نیستید#》"
 end 
 end
 
@@ -2671,10 +2671,10 @@ end
 end
 if not lang then
 local settings = data[tostring(target)]["settings"] 
- text ="*gяσυρ ѕєттιηgѕ:*\n🔹_ℓσcк є∂ιт :_ *"..settings.lock_edit.."*\n🔹_ℓσcк ℓιηкѕ :_ *"..settings.lock_link.."*\n🔹_ℓσcк тαgѕ :_ *"..settings.lock_tag.."*\n🔹_ℓσcк ƒℓσσ∂ :_ *"..settings.flood.."*\n🔹_ℓσcк ѕραм :_ *"..settings.lock_spam.."*\n🔹_ℓσcк мєηтιση :_ *"..settings.lock_mention.."*\n🔹_ℓσcк αяαвιc :_ *"..settings.lock_arabic.."*\n🔹_ℓσcк ωєвραgє :_ *"..settings.lock_webpage.."*\n🔹_ℓσcк мαяк∂σωη :_ *"..settings.lock_markdown.."*\n🔹_ℓσcк єηgℓιѕн :_ *"..settings.english.."*\n🔹_ℓσcк ƒσѕн :_ *"..settings.fosh.."*\n🔹_ℓσcк α∂ѕ :_ *"..settings.ads.."*\n🔹_ℓσcк νιєωѕ :_ *"..settings.views.."*\n🔹_ℓσcк ємσנι :_ *"..settings.emoji.."*\n🔹_gяσυρ ωєℓcσмє :_ *"..settings.welcome.."*\n🔹_ℓσcк ριη мєѕѕαgє :_ *"..settings.lock_pin.."*\n🔹_вσтѕ ρяσтєcтιση :_ *"..settings.lock_bots.."*\n🔹_ƒℓσσ∂ ѕєηѕιтινιту:_ *"..NUM_MSG_MAX.."*\n*____________________*\n*gяσυρ мυтє ℓιѕт* : \n🔸_мυтє αℓℓ : _ *"..settings.mute_all.."*\n🔸_мυтє gιƒ :_ *"..settings.mute_gif.."*\n🔸_мυтє тєχт :_ *"..settings.mute_text.."*\n🔸_мυтє ιηℓιηє :_ *"..settings.mute_inline.."*\n🔸_мυтє gαмє :_ *"..settings.mute_game.."*\n🔸_мυтє ρнσтσ :_ *"..settings.mute_photo.."*\n🔸_мυтє νι∂єσ :_ *"..settings.mute_video.."*\n🔸_мυтє αυ∂ισ :_ *"..settings.mute_audio.."*\n🔸_мυтє νσιcє :_ *"..settings.mute_voice.."*\n🔸_мυтє ѕтιcкєя :_ *"..settings.mute_sticker.."*\n🔸_мυтє cσηтαcт :_ *"..settings.mute_contact.."*\n🔸_мυтє ƒσяωαя∂ :_ *"..settings.mute_forward.."*\n🔸_мυтє ℓσcαтιση :_ *"..settings.mute_location.."*\n🔸_мυтє ∂σcυмєηт :_ *"..settings.mute_document.."*\n🔸_мυтє тgѕєяνιcє :_ *"..settings.mute_tgservice.."*\n🔸_мυтє кєувσαя∂ :_ *"..settings.mute_keyboard.."*\n*____________________*\n*gяσυρ ℓαηgυαgє* : *єη*"
+ text ="*gяσυρ ѕєттιηgѕ:*\n🔹_ℓσcк є∂ιт :_ *"..settings.lock_edit.."*\n🔹_ℓσcк ℓιηкѕ :_ *"..settings.lock_link.."*\n🔹_ℓσcк тαgѕ :_ *"..settings.lock_tag.."*\n🔹_ℓσcк ƒℓσσ∂ :_ *"..settings.flood.."*\n🔹_ℓσcк ѕραм :_ *"..settings.lock_spam.."*\n🔹_ℓσcк мєηтιση :_ *"..settings.lock_mention.."*\n🔹_ℓσcк αяαвιc :_ *"..settings.lock_arabic.."*\n🔹_ℓσcк ωєвραgє :_ *"..settings.lock_webpage.."*\n🔹_ℓσcк мαяк∂σωη :_ *"..settings.lock_markdown.."*\n🔹_ℓσcк єηgℓιѕн :_ *"..settings.english.."*\n🔹_ℓσcк ƒσѕн :_ *"..settings.fosh.."*\n🔹_ℓσcк α∂ѕ :_ *"..settings.ads.."*\n🔹_ℓσcк νιєωѕ :_ *"..settings.views.."*\n🔹_ℓσcк ємσנι :_ *"..settings.emoji.."*\n🔹_gяσυρ ωєℓcσмє :_ *"..settings.welcome.."*\n🔹_ℓσcк ριη мєѕѕαgє :_ *"..settings.lock_pin.."*\n🔹_вσтѕ ρяσтєcтιση :_ *"..settings.lock_bots.."*\n🔹_ƒℓσσ∂ ѕєηѕιтινιту:_ *"..NUM_MSG_MAX.."*\n*____________________*\n*gяσυρ мυтє ℓιѕт* : \n🔸_мυтє αℓℓ : _ *"..settings.mute_all.."*\n🔸_мυтє gιƒ :_ *"..settings.mute_gif.."*\n🔸_мυтє тєχт :_ *"..settings.mute_text.."*\n🔸_мυтє ιηℓιηє :_ *"..settings.mute_inline.."*\n🔸_мυтє gαмє :_ *"..settings.mute_game.."*\n🔸_мυтє ρнσтσ :_ *"..settings.mute_photo.."*\n🔸_мυтє νι∂єσ :_ *"..settings.mute_video.."*\n🔸_мυтє αυ∂ισ :_ *"..settings.mute_audio.."*\n🔸_мυтє νσιcє :_ *"..settings.mute_voice.."*\n🔸_мυтє ѕтιcкєя :_ *"..settings.mute_sticker.."*\n🔸_мυтє cσηтαcт :_ *"..settings.mute_contact.."*\n🔸_мυтє ƒσяωαя∂ :_ *"..settings.mute_forward.."*\n🔸_мυтє ℓσcαтιση :_ *"..settings.mute_location.."*\n🔸_мυтє ∂σcυмєηт :_ *"..settings.mute_document.."*\n🔸_мυтє тgѕєяνιcє :_ *"..settings.mute_tgservice.."*\n🔸_мυтє кєувσαя∂ :_ *"..settings.mute_keyboard.."*\n*____________________*\n*gяσυρ ℓαηgυαgє* : *єη*"*LuaMASTER*
 else
 local settings = data[tostring(target)]["settings"] 
- text = "*تنظیمات گروه:*\n_قفل ویرایش پیام :_ *"..settings.lock_edit.."*\n_قفل لینک :_ *"..settings.lock_link.."*\n_قفل تگ :_ *"..settings.lock_tag.."*\n_قفل پیام مکرر :_ *"..settings.flood.."*\n_قفل هرزنامه :_ *"..settings.lock_spam.."*\n_قفل فراخوانی :_ *"..settings.lock_mention.."*\n_قفل عربی :_ *"..settings.lock_arabic.."*\n_قفل صفحات وب :_ *"..settings.lock_webpage.."*\n_قفل فونت :_ *"..settings.lock_markdown.."*\n_قفل انگلیسی :_ *"..settings.english.."*\n_قفل فحش: _ *"..settings.fosh.."*\n_قفل تبلیفات:_ *"..settings.ads.."*\n_قفل پست ویودار:_ *"..settings.views.."*\n_قفل اموجی:_ *"..settings.emoji.."*\n_پیام خوشآمد گویی :_ *"..settings.welcome.."*\n_قفل سنجاق کردن :_ *"..settings.lock_pin.."*\n_محافظت در برابر ربات ها :_ *"..settings.lock_bots.."*\n_حداکثر پیام مکرر :_ *"..NUM_MSG_MAX.."*\n*____________________*\n*لیست بیصدا ها* : \n_بیصدا همه : _ *"..settings.mute_all.."*\n_بیصدا تصاویر متحرک :_ *"..settings.mute_gif.."*\n_بیصدا متن :_ *"..settings.mute_text.."*\n_بیصدا کیبورد شیشه ای :_ *"..settings.mute_inline.."*\n_بیصدا بازی های تحت وب :_ *"..settings.mute_game.."*\n_بیصدا عکس :_ *"..settings.mute_photo.."*\n_بیصدا فیلم :_ *"..settings.mute_video.."*\n_بیصدا آهنگ :_ *"..settings.mute_audio.."*\n_بیصدا صدا :_ *"..settings.mute_voice.."*\n_بیصدا برچسب :_ *"..settings.mute_sticker.."*\n_بیصدا مخاطب :_ *"..settings.mute_contact.."*\n_بیصدا نقل قول :_ *"..settings.mute_forward.."*\n_بیصدا موقعیت :_ *"..settings.mute_location.."*\n_بیصدا اسناد :_ *"..settings.mute_document.."*\n_بیصدا خدمات تلگرام :_ *"..settings.mute_tgservice.."*\n_بیصدا صفحه کلید :_ *"..settings.mute_keyboard.."*\n*____________________*\n_زبان سوپرگروه_ : *FA*"
+ text = "*تنظیمات گروه:*\n_قفل ویرایش پیام :_ *"..settings.lock_edit.."*\n_قفل لینک :_ *"..settings.lock_link.."*\n_قفل تگ :_ *"..settings.lock_tag.."*\n_قفل پیام مکرر :_ *"..settings.flood.."*\n_قفل هرزنامه :_ *"..settings.lock_spam.."*\n_قفل فراخوانی :_ *"..settings.lock_mention.."*\n_قفل عربی :_ *"..settings.lock_arabic.."*\n_قفل صفحات وب :_ *"..settings.lock_webpage.."*\n_قفل فونت :_ *"..settings.lock_markdown.."*\n_قفل انگلیسی :_ *"..settings.english.."*\n_قفل فحش: _ *"..settings.fosh.."*\n_قفل تبلیفات:_ *"..settings.ads.."*\n_قفل پست ویودار:_ *"..settings.views.."*\n_قفل اموجی:_ *"..settings.emoji.."*\n_پیام خوشآمد گویی :_ *"..settings.welcome.."*\n_قفل سنجاق کردن :_ *"..settings.lock_pin.."*\n_محافظت در برابر ربات ها :_ *"..settings.lock_bots.."*\n_حداکثر پیام مکرر :_ *"..NUM_MSG_MAX.."*\n*____________________*\n*لیست بیصدا ها* : \n_بیصدا همه : _ *"..settings.mute_all.."*\n_بیصدا تصاویر متحرک :_ *"..settings.mute_gif.."*\n_بیصدا متن :_ *"..settings.mute_text.."*\n_بیصدا کیبورد شیشه ای :_ *"..settings.mute_inline.."*\n_بیصدا بازی های تحت وب :_ *"..settings.mute_game.."*\n_بیصدا عکس :_ *"..settings.mute_photo.."*\n_بیصدا فیلم :_ *"..settings.mute_video.."*\n_بیصدا آهنگ :_ *"..settings.mute_audio.."*\n_بیصدا صدا :_ *"..settings.mute_voice.."*\n_بیصدا برچسب :_ *"..settings.mute_sticker.."*\n_بیصدا مخاطب :_ *"..settings.mute_contact.."*\n_بیصدا نقل قول :_ *"..settings.mute_forward.."*\n_بیصدا موقعیت :_ *"..settings.mute_location.."*\n_بیصدا اسناد :_ *"..settings.mute_document.."*\n_بیصدا خدمات تلگرام :_ *"..settings.mute_tgservice.."*\n_بیصدا صفحه کلید :_ *"..settings.mute_keyboard.."*\n*____________________*\n_زبان سوپرگروه_ : *FA*"*LuaMASTER*
 end
 if not lang then
 text = string.gsub(text, "yes", "ყεร")
@@ -3144,9 +3144,9 @@ if matches[1] == 'newlink' and is_mod(msg) or  matches[1] == 'لینک جدید'
       end
       end
      if not lang then
-       text = "<b>Group Link :</b>\n"..linkgp
+       text = "<b>Group Link🏷 :</b>\n"..linkgp
      else
-      text = "<b>لینک گروه :</b>\n"..linkgp
+      text = "<b>لینک گروه🏷 :</b>\n"..linkgp
          end
         return tdcli.sendMessage(chat, msg.id, 1, text, 1, 'html')
      end
@@ -3708,6 +3708,7 @@ _نمایش لیست مالکان گروه_
 _تنظیم زبان ربات_
 
 _موفق باشید :)_
+*@LUAmaster*
 ]]
 return text
 end
